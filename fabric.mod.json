@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dexvisual",
+  "version": "${version}",
+  "name": "DEX VISUAL",
+  "description": "Premium visual & performance client mod for Minecraft PvP: custom HUD, HUD editor, crosshair editor, profiles and more.",
+  "authors": ["DEX VISUAL"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/dexvisual/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.dexvisual.DexVisualClient"]
+  },
+  "mixins": ["dexvisual.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
