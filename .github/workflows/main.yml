@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "DEX VISUAL 1.21.4"
+git branch -M main
+git remote add origin https://github.com/USERNAME/dexvisual.git
+git push -u origin main
