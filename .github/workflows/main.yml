@@ -2,7 +2,6 @@ name: Build DEX VISUAL
 
 on:
   push:
-  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -15,10 +14,10 @@ jobs:
           distribution: temurin
           java-version: 21
       - uses: gradle/actions/setup-gradle@v4
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        with:
+          gradle-version: 9.7.1
       - name: Build
-        run: ./gradlew build --no-daemon
+        run: gradle build --no-daemon
       - name: Upload jar
         uses: actions/upload-artifact@v4
         with:
